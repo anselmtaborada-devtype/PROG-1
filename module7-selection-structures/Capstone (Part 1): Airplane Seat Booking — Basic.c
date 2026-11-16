@@ -1,6 +1,11 @@
 #include <stdio.h>
-double excessFee( double baggageWeight, double baggageAllowance){
-return excessFee = (baggageWeight - baggageAllowance) * 150.0;
+double findexcess( double baggageWeight, double baggageAllowance){
+return (baggageWeight - baggageAllowance) * 150.0;
+}
+
+double findall(double baseFare, double excessFee){
+
+return baseFare + excessFee;
 }
 int main(){
 
@@ -31,12 +36,12 @@ char travelclass;
     }
 
     if( baggageWeight > baggageAllowance){
-        findexcessFee
+        excessFee = findexcess(baggageWeight, baggageAllowance);
     } else{
         excessFee = 0.0;
     }
 
-    totalFare = baseFare + excessFee;
+    totalFare = findall(baseFare,excessFee);
     
     printf("\n----- BOARDING SUMMARY -----\n");
     printf("Travel Class: %s\n",(travelclass == 'E' || 'e') ? "Economy" : "Business");
