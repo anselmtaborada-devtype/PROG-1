@@ -1,5 +1,18 @@
 #include <stdio.h>
 float findbmi(float weight, float height) {
+    
+    if(BMI < 18.5){
+        printf("Category:Underweight");
+    }
+    else if(BMI < 24.9){
+        printf("Category:Normal");
+    }
+    else if(BMI < 29.9){
+        printf("Category:Overweight");
+    }
+    else{
+        printf("Category:Obese");
+    }
     return weight / (height * height);
 }
 int main(){
@@ -16,16 +29,5 @@ int main(){
 
     printf("BMI:%.2f\n ",BMI);
 
-    if(BMI < 18.5){
-        printf("Category:Underweight");
-    }
-    else if(BMI < 24.9){
-        printf("Category:Normal");
-    }
-    else if(BMI < 29.9){
-        printf("Category:Overweight");
-    }
-    else{
-        printf("Category:Obese");
-    }
+   return 0;
 }
