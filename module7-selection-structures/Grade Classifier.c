@@ -1,12 +1,5 @@
 #include <stdio.h>
-
-int main(){
-
-    int grade;
-
-    printf("Enter your Grade (0-100): ");
-    scanf("%d", &grade);
-
+int findgrade(int grade){
     if( grade > 90){
         printf("Your grade is: A.\n");
     }
@@ -22,5 +15,15 @@ int main(){
     else{
         printf("Your grade is: F.\n");
     }
+    return grade;
+}
+int main(){
+
+    int grade;
+
+    printf("Enter your Grade (0-100): ");
+    scanf("%d", &grade);
+
+    grade = findgrade(grade);
     return 0;
 }
