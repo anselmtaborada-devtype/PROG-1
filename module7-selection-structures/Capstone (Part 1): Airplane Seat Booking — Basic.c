@@ -2,13 +2,11 @@
 double findexcess( double baggageWeight, double baggageAllowance){
 return (baggageWeight - baggageAllowance) * 150.0;
 }
-
 double findall(double baseFare, double excessFee){
-
 return baseFare + excessFee;
 }
 int main(){
-
+    
 double baggageWeight, baseFare, baggageAllowance, excessWeight, excessFee, totalFare;
 char travelclass;
 
@@ -20,7 +18,7 @@ char travelclass;
     }
 
     printf("Enter baggage weight (kg): ");
-    if(scanf("%lf", &baggageWeight) !=0 || baggageWeight < 0){
+    if(scanf("%lf", &baggageWeight) !=1 || baggageWeight < 0){
         printf("ERROR: invalid input\n");
         return 1;
     }
@@ -36,7 +34,7 @@ char travelclass;
     }
 
     if( baggageWeight > baggageAllowance){
-        excessFee = findexcess(baggageWeight, baggageAllowance);
+        excessFee = findexcess(baggageWeight,baggageAllowance);
     } else{
         excessFee = 0.0;
     }
@@ -46,7 +44,7 @@ char travelclass;
     printf("\n----- BOARDING SUMMARY -----\n");
     printf("Travel Class: %s\n",(travelclass == 'E' || 'e') ? "Economy" : "Business");
     printf("Base Fare: %.2f\n", baseFare);
-    printf("Baggage Weight: %.2lf\n", baggageWeight);
+    printf("Baggage Weight: %.2lf kg\n", baggageWeight);
     printf("Excess Baggage Fee: PHP %.2f\n", excessFee);
     printf("Total Fare: PHP %.2f\n", totalFare);
     printf("-----------------------------");
