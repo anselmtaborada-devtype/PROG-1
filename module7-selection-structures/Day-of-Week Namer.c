@@ -1,13 +1,6 @@
 #include <stdio.h>
-
-int main(){
-
-int day;
-
-    printf("Choose a number between (1-7): ");
-    scanf(" %d",&day);
-
-switch(day){
+int findday(int day){
+    switch(day){
 
     case 1:
     printf("day 1 is Monday.\n");
@@ -40,5 +33,15 @@ switch(day){
     default:
     printf("ERROR: '%d' please choose just between the givin");
 }
+return day;
+    
+}
+int main(){
+
+int day;
+
+    printf("Choose a number between (1-7): ");
+    scanf(" %d",&day);
+
     return 0;
 }
