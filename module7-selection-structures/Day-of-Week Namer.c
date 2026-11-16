@@ -33,8 +33,7 @@ int findday(int day){
     default:
     printf("ERROR: '%d' please choose just between the givin");
 }
-return day;
-    
+return day;   
 }
 int main(){
 
@@ -43,5 +42,6 @@ int day;
     printf("Choose a number between (1-7): ");
     scanf(" %d",&day);
 
+    day = findday(day);
     return 0;
 }
