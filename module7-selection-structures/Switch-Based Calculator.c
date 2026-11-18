@@ -1,19 +1,7 @@
 #include <stdio.h>
 
-int main(){
-
-    char operation;
-    int c, d;
-   
-
-    printf("Enter your first number: ");
-    scanf("%d", &c);
-    printf("Enter your second number: ");
-    scanf("%d", &d);
-    printf("Choose your operation (*, -, +, /): ");
-    scanf(" %c", &operation);
-
-switch(operation){
+int findresult(int c, int d){
+    switch(operation){
 
     case '*':
     printf("Result: %d * %d = %d\n" , c, d, c * d );
@@ -45,5 +33,21 @@ switch(operation){
         break ;
      }
 }
+    return 
+}
+int main(){
+
+    char operation;
+    int c, d;
+   
+
+    printf("Enter your first number: ");
+    scanf("%d", &c);
+    printf("Enter your second number: ");
+    scanf("%d", &d);
+    printf("Choose your operation (*, -, +, /): ");
+    scanf(" %c", &operation);
+
+
 return 0;
 }
