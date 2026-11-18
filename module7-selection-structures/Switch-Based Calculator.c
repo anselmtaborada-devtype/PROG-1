@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int findresult(int c, int d){
+int findresult(int c, int d, char operation){
     switch(operation){
 
     case '*':
@@ -33,7 +33,7 @@ int findresult(int c, int d){
         break ;
      }
 }
-    return 
+    return operation;
 }
 int main(){
 
@@ -47,6 +47,8 @@ int main(){
     scanf("%d", &d);
     printf("Choose your operation (*, -, +, /): ");
     scanf(" %c", &operation);
+
+    findresult(c,d, operation);
 
 
 return 0;
