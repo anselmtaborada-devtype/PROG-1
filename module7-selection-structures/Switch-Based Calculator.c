@@ -33,7 +33,6 @@ int findresult(int c, int d, char operation){
         break ;
      }
 }
-    return operation;
 }
 int main(){
 
