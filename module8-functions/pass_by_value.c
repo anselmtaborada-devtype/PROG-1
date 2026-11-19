@@ -1,20 +1,16 @@
 #include <stdio.h>
 
-int main(){
+void tryToDouble(int num) {
+    num = num * 2;
+    printf("Inside tryToDouble, doubled value = %d\n", num);
+}
 
-int choice;
-float temperature;
+int main() {
+    int num = 7;
 
-  printf("1 - Celsius to Fahrenheit\n");
-  printf("2 - Fahrenheit to Celsius\n");
+    printf("Before calling tryToDouble: num = %d\n", num);
+    tryToDouble(num);
+    printf("After calling tryToDouble: num = %d\n", num);
 
-  printf("Choice: \n");
-  scanf("%d", &choice);
-
-  printf("Enter Celsius value: \n");
-  scanf("%f", &temperature);
-
-switch (choice){
-
-case 1 : ( temperature × 9/5) + 32 = 32°F
-
+    return 0;
+}
