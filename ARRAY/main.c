@@ -2,18 +2,15 @@
 
 int main(){
 
-    int numberofWords= 10 ;
-    char word[numberofWords];
+    char word[100];
 
     printf("ENTER YOUR WORD: ");
     scanf("%s", word);
 
-    int len = 0 ;
-    while (word[len] != '\0'){
-        len ++;
-    }
+    int len ;
+    for( len = 0 ; word[len] != '\0' ; len++);
 
-    printf("\nForward: ");
+    printf("\nOriginal: ");
     for (int i = 0; i < len; i++) {
         printf("%c ", word[i]);
     }
