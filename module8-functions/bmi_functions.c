@@ -1,7 +1,6 @@
 #include <stdio.h>
-float calculateBMI(float weightKg, float heightM){
-
-  return weightKg / (heightM * heightM);
+float calculateBMI(float weight, float height){
+  return weight / (height* height);
 }
 int main(){
 
@@ -13,9 +12,9 @@ int main(){
     printf("Enter your Height(in Meters): ");
     scanf(" %f", &height);
 
-    BMI = weight / (height * height);
+    BMI = calculateBMI(weight, height);
 
-    printf("BMI: ",BMI);
+    printf("BMI:%.2F",BMI);
 
     if(BMI < 18.5){
         printf("Category:Underweight");
